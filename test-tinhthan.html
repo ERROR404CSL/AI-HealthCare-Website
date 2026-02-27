@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bài test sức khỏe tinh thần</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar section-content">
+        <a href="index.html" class="naglog">
+            <h2 class="logotext">💊HealthCare</h2>
+        </a>
+
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+        <li class="nav-item"><a href="tuvan.html" class="nav-link">Tư Vấn</a></li>
+        <li class="nav-item"><a href="reviews.html" class="nav-link">Khách Hàng</a></li>
+        <li class="nav-item"><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+      </ul>
+    </nav>
+</header>
+
+<section class="test-container">
+    <h1>Bài kiểm tra sức khỏe tinh thần</h1>
+    <p>Trong 2 tuần qua bạn cảm thấy như thế nào?</p>
+
+    <form id="mentalTest">
+
+        <!-- Câu 1 -->
+        <div class="question">
+            <h3>1. Bạn có cảm thấy buồn bã, trống rỗng?</h3>
+            <label><input type="radio" name="q1" value="0"> Không bao giờ</label>
+            <label><input type="radio" name="q1" value="1"> Thỉnh thoảng</label>
+            <label><input type="radio" name="q1" value="2"> Thường xuyên</label>
+            <label><input type="radio" name="q1" value="3"> Gần như mỗi ngày</label>
+        </div>
+
+        <!-- Câu 2 -->
+        <div class="question">
+            <h3>2. Bạn có mất hứng thú với các hoạt động yêu thích?</h3>
+            <label><input type="radio" name="q2" value="0"> Không</label>
+            <label><input type="radio" name="q2" value="1"> Ít</label>
+            <label><input type="radio" name="q2" value="2"> Nhiều</label>
+            <label><input type="radio" name="q2" value="3"> Rất nhiều</label>
+        </div>
+
+        <!-- Câu 3 -->
+        <div class="question">
+            <h3>3. Bạn có khó ngủ hoặc ngủ quá nhiều?</h3>
+            <label><input type="radio" name="q3" value="0"> Không</label>
+            <label><input type="radio" name="q3" value="1"> Thỉnh thoảng</label>
+            <label><input type="radio" name="q3" value="2"> Thường xuyên</label>
+            <label><input type="radio" name="q3" value="3"> Liên tục</label>
+        </div>
+
+        <!-- Câu 4 -->
+        <div class="question">
+            <h3>4. Bạn có cảm thấy lo âu hoặc căng thẳng?</h3>
+            <label><input type="radio" name="q4" value="0"> Không</label>
+            <label><input type="radio" name="q4" value="1"> Ít</label>
+            <label><input type="radio" name="q4" value="2"> Nhiều</label>
+            <label><input type="radio" name="q4" value="3"> Rất nhiều</label>
+        </div>
+
+        <!-- Câu 5 -->
+        <div class="question">
+            <h3>5. Bạn có cảm thấy mệt mỏi, thiếu năng lượng?</h3>
+            <label><input type="radio" name="q5" value="0"> Không</label>
+            <label><input type="radio" name="q5" value="1"> Thỉnh thoảng</label>
+            <label><input type="radio" name="q5" value="2"> Thường xuyên</label>
+            <label><input type="radio" name="q5" value="3"> Gần như mỗi ngày</label>
+        </div>
+
+        <button type="button" onclick="calculateScore()">Xem kết quả AI</button>
+
+    </form>
+
+    <div id="resultBox"></div>
+</section>
+
+<script>
+
+function calculateScore() {
+
+    let total = 0;
+    let form = document.getElementById("mentalTest");
+
+    for (let i = 1; i <= 5; i++) {
+        let q = form["q"+i];
+        let answered = false;
+
+        for (let j = 0; j < q.length; j++) {
+            if (q[j].checked) {
+                total += parseInt(q[j].value);
+                answered = true;
+            }
+        }
+
+        if (!answered) {
+            alert("Vui lòng trả lời tất cả câu hỏi!");
+            return;
+        }
+    }
+
+    let resultText = "";
+
+    if (total <= 4) {
+        resultText = "🟢 AI đánh giá: Tinh thần của bạn đang ở mức ổn định.";
+    }
+    else if (total <= 8) {
+        resultText = "🟡 AI đánh giá: Bạn có dấu hiệu căng thẳng nhẹ. Nên nghỉ ngơi và chăm sóc bản thân.";
+    }
+    else if (total <= 12) {
+        resultText = "🟠 AI đánh giá: Có dấu hiệu lo âu hoặc trầm cảm mức trung bình. Nên cân nhắc tư vấn chuyên gia.";
+    }
+    else {
+        resultText = "🔴 AI đánh giá: Mức độ nghiêm trọng cao. Bạn nên liên hệ chuyên gia tâm lý càng sớm càng tốt.";
+    }
+
+    document.getElementById("resultBox").innerHTML =
+        "<h2>Kết quả của bạn: " + total + " điểm</h2><p>" + resultText + "</p>";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Liên Hệ - HealthCare</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+      <li class="nav-item"><a href="tuvan.html" class="nav-link">Tư Vấn</a></li>
+      <li class="nav-item"><a href="reviews.html" class="nav-link">Khách Hàng</a></li>
+      <li class="nav-item"><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link active">Liên Hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+
+  <h2 class="contact-title">CONTACT US</h2>
+  <div class="underline"></div>
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <p>📍 THPT Chuyên Sơn La, Phường Chiềng Sinh, Tỉnh Sơn La, Việt Nam</p>
+      <p>📞 (123) 456 789</p>
+      <p>✉ info@healthcarewebsite.com</p>
+      <p>🕒 Monday - Friday: 8:00 AM - 5:00 PM</p>
+      <p>🕒 Saturday: 10:00 AM - 4:00 PM</p>
+      <p>🕒 Sunday: Closed</p>
+      <p>🌐 www.healthcareweb.com</p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your name" required>
+
+    <input type="email" id="email" placeholder="Your email" 
+           pattern=".+@.+\..+" 
+           required>
+
+    <textarea id="message" placeholder="Your message"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+  </div>
+</section>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  if (name === "") {
+    alert("Vui lòng nhập tên!");
+    e.preventDefault();
+    return;
+  }
+
+  if (!email.includes("@")) {
+    alert("Email phải chứa ký tự @ !");
+    e.preventDefault();
+    return;
+  }
+
+  alert("Gửi thành công!");
+});
+</script>
+</body>
+</html>

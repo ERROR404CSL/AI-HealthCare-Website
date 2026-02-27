@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đặt Lịch Thông Minh</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="chat-page">
+
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+      <li class="nav-item"><a href="tuvan.html" class="nav-link">Tư Vấn</a></li>
+      <li class="nav-item"><a href="reviews.html" class="nav-link">Khách Hàng</a></li>
+      <li class="nav-item"><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+    </ul>
+
+    <button id="menu-open-button" class="fas fa-bars"></button>
+  </nav>
+</header>
+
+<main class="chat-container">
+
+<div class="chat-header">
+<h2>🤖 Đặt Lịch Khám Thông Minh</h2>
+<p>AI sẽ đề xuất chuyên khoa & thời gian phù hợp</p>
+</div>
+
+<div class="chat-box" id="bookingBox">
+
+<div class="booking-form">
+
+<input type="text" id="patientName" placeholder="Họ và tên *" required>
+
+<textarea id="symptomBooking" placeholder="Mô tả triệu chứng *" required></textarea>
+
+<label>Chọn ngày khám:</label>
+<input type="date" id="bookingDate">
+
+<div id="calendarSlots" class="slot-container"></div>
+  <select id="urgencyBooking">
+  <option value="normal">Mức độ bình thường</option>
+  <option value="urgent">Khẩn cấp</option>
+  </select>
+  <button onclick="aiBookingSuggest()">🤖 AI Gợi ý lịch</button>
+  
+<div id="bookingResult"></div>
+   <button onclick="confirmBooking()">Xác nhận đặt lịch</button>
+
+  <script src="booking.js"></script>
+</div>

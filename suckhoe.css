@@ -1,0 +1,125 @@
+.health-section {
+  padding: 120px 10%;
+}
+
+.health-section h2 {
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.health-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.health-card:hover {
+  transform: translateY(-5px);
+}
+
+.health-card img {
+  width: 100%;
+  height: 180px;        /* cố định chiều cao */
+  object-fit: cover;    /* ảnh tự cắt cho vừa khung */
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.health-card h4 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.health-card.large img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.featured {
+  margin-top: 40px;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f2f4f7;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 5px;
+}
+
+.search-box span {
+  cursor: pointer;
+}
+
+/* SLIDER */
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.health-card {
+  min-width: 260px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+/* Nút trượt */
+
+.slide-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 22px;
+  padding: 8px 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.slide-btn.left {
+  left: -10px;
+}
+
+.slide-btn.right {
+  right: -10px;
+}

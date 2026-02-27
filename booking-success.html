@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lịch đã đặt</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="chat-page">
+
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">Về chúng tôi</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Tư Vấn</a></li>
+      <li class="nav-item"><a href="reviews.html" class="nav-link">Khách Hàng</a></li>
+      <li class="nav-item"><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link"> Liên Hệ</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<main class="chat-container">
+
+<div class="chat-header">
+<h2>🎉 Đặt lịch thành công</h2>
+<p>Thông tin lịch hẹn của bạn</p>
+</div>
+
+<div class="chat-box" id="bookingInfo"></div>
+
+<div style="padding:20px; text-align:center;">
+    <a href="booking.html" class="button order-now">Đặt lịch khác</a>
+    <a href="index.html" class="button contact-us" style="margin-left:10px;">Về Trang Chủ</a>
+</div>
+
+</main>
+
+<script>
+
+let allBookings = JSON.parse(localStorage.getItem("bookings")) || [];
+const infoBox = document.getElementById("bookingInfo");
+
+function renderBookings(){
+
+    infoBox.innerHTML = "<h3>📋 Danh sách lịch đã đặt</h3><br>";
+
+    if(allBookings.length === 0){
+        infoBox.innerHTML += "<p>Chưa có lịch nào.</p>";
+        return;
+    }
+
+    allBookings.forEach((booking, index) => {
+
+        infoBox.innerHTML += `
+        <div style="margin-bottom:15px; padding:15px; background:#eef2ff; border-radius:12px;">
+            <strong>👤 ${booking.name}</strong><br>
+            🏥 ${booking.department}<br>
+            📅 ${booking.date}<br>
+            🕒 ${booking.time}<br><br>
+            <button onclick="cancelBooking(${index})"
+            style="background:#ff4d4d; color:white; padding:6px 12px; border-radius:20px;">
+            ❌ Huỷ lịch
+            </button>
+        </div>
+        `;
+    });
+}
+
+function cancelBooking(index){
+
+    const confirmCancel = confirm("Bạn có chắc muốn huỷ lịch này không?");
+
+    if(!confirmCancel) return;
+
+    allBookings.splice(index, 1);
+
+    localStorage.setItem("bookings", JSON.stringify(allBookings));
+
+    renderBookings();
+}
+
+renderBookings();
+
+</script>
+
+</body>
+</html>

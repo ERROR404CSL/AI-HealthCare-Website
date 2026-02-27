@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài viết sức khỏe</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="suckhoe.css">
+</head>
+
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+      <li><a href="tuvan.html" class="nav-link active">Tư Vấn</a></li>
+      <li><a href="reviews.html" class="nav-link active">Khách Hàng</a></li>
+      <li><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+      <li><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="health-section">
+
+  <div class="section-top">
+    <h2>Bài viết mới nhất</h2>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tìm kiếm bài viết...">
+      <span>🔍</span>
+    </div>
+  </div>
+
+  <div class="slider-wrapper">
+    <button class="slide-btn left" onclick="slideLeft()">❮</button>
+
+    <div class="slider" id="articleSlider">
+
+      <div class="health-card">
+        <img src="images/cshetieuhoa.jpg">
+        <h4>Chăm sóc hệ tiêu hóa đúng cách</h4>
+      </div>
+
+      <div class="health-card">
+        <img src="images/dotquy.jpg">
+        <h4>Cách phòng tránh đột quỵ sớm</h4>
+      </div>
+
+      <div class="health-card">
+        <img src="images/timmach.jpg">
+        <h4>Giữ sức khỏe tim mạch sau 40 tuổi</h4>
+      </div>
+
+      <div class="health-card">
+        <img src="images/stress.webp">
+        <h4>Stress kéo dài ảnh hưởng đến sức khỏe như thế nào?</h4>
+      </div>
+
+      <div class="health-card">
+        <img src="images/huyetap.jpg">
+        <h4>Làm sao để kiểm soát huyết áp ổn định tại nhà?</h4>
+      </div>
+
+      <div class="health-card">
+        <img src="images/vitamin.jpg">
+        <h4>7 dấu hiệu cảnh báo cơ thể đang thiếu vitamin nghiêm trọng</h4>
+      </div>
+
+    </div>
+
+    <button class="slide-btn right" onclick="slideRight()">❯</button>
+  </div>
+
+  <h2 class="featured">Bài viết nổi bật</h2>
+
+  <div class="card-grid">
+
+    <div class="health-card large">
+      <img src="images/tamly.jpg">
+      <h4>Tư vấn tâm lý miễn phí cho mọi lứa tuổi</h4>
+    </div>
+
+    <div class="health-card large">
+      <img src="images/dinhduong.jpg">
+      <h4>Dinh dưỡng khoa học giúp tăng sức đề kháng</h4>
+    </div>
+
+</section>
+
+<script src="suckhoe.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+.consult-section {
+  padding: 120px 10%;
+  background: #f6f7f9;
+}
+
+.consult-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.consult-card {
+  background: white;
+  width: 450px;
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.consult-card img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.consult-card h3 {
+  font-size: 22px;
+}
+
+.consult-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}

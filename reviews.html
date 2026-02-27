@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đánh Giá Khách Hàng | HealthCare</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+      <li class="nav-item"><a href="tuvan.html" class="nav-link">Tư Vấn</a></li>
+      <li class="nav-item"><a href="reviews.html" class="nav-link active">Khách Hàng</a></li>
+      <li class="nav-item"><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="review-hero">
+  <div class="section-content">
+    <h1>AI tổng hợp & phân tích mức độ hài lòng</h1>
+    <p>Hệ thống AI tự động tính toán và cập nhật theo thời gian thực</p>
+
+    <div class="review-buttons">
+      <button class="review-btn primary" onclick="scrollToReviews()">Xem đánh giá</button>
+      <button class="review-btn secondary" onclick="scrollToForm()">Gửi đánh giá</button>
+    </div>
+  </div>
+</section>
+
+<section class="ai-analytics section-content">
+  <h2>AI Dashboard</h2>
+  <h3 id="averageScore"></h3>
+  <canvas id="ratingChart"></canvas>
+  <p id="aiInsightText"></p>
+</section>
+
+<section class="review-list section-content" id="reviewsSection">
+  <h2>Khách hàng nói gì?</h2>
+  <div id="reviewsContainer"></div>
+</section>
+
+<section class="review-form section-content" id="formSection">
+  <h2>Chia sẻ trải nghiệm</h2>
+  <form id="reviewForm">
+    <input type="text" id="name" placeholder="Tên của bạn" required>
+    <select id="rating" required>
+      <option value="">Chọn số sao</option>
+      <option value="5">★★★★★</option>
+      <option value="4">★★★★</option>
+      <option value="3">★★★</option>
+      <option value="2">★★</option>
+      <option value="1">★</option>
+    </select>
+    <textarea id="comment" placeholder="Chia sẻ trải nghiệm..." required></textarea>
+    <button type="submit">Gửi đánh giá</button>
+  </form>
+</section>
+
+<script src="reviews.js"></script>
+</body>
+</html>

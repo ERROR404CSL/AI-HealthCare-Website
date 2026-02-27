@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>AI Health Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="chat-page">
+
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+      <li class="nav-item"><a href="tuvan.html" class="nav-link highlight active">Tư Vấn</a></li>
+      <li class="nav-item"><a href="reviews.html" class="nav-link">Khách Hàng</a></li>
+      <li class="nav-item"><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="chat-container">
+
+  <div class="chat-header">
+    <h2>AI Health Assistant</h2>
+    <p>Trợ lý sức khỏe thông minh 24/7</p>
+  </div>
+
+  <div id="chatBox" class="chat-box"></div>
+
+  <div class="quick-replies">
+    <button class="quick-btn" onclick="quickAsk('Tôi bị sốt cao lên tới 40 độ')">Sốt cao</button>
+    <button class="quick-btn" onclick="quickAsk('Tôi đau ngực và khó thở thường xuyên')">Đau ngực</button>
+    <button class="quick-btn" onclick="quickAsk('Tôi bị mất ngủ')">Mất ngủ</button>
+  </div>
+
+  <div class="chat-input-area">
+    <input type="text" id="userInput" placeholder="Nhập triệu chứng của bạn...">
+    <button onclick="sendMessage()">Gửi</button>
+  </div>
+
+</main>
+
+<!-- CHỈ LOAD AI SCRIPT, KHÔNG DÙNG AI TRONG script.js -->
+<script src="ai-script.js"></script>
+
+</body>
+</html>

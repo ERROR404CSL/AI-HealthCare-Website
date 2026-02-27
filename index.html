@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Website | ERROR404CSL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!--Linking-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Header / Navbar -->
+    <header>
+        <nav class="navbar section-content">
+         <a href="#" class="naglog">
+            <h2 class="logotext">💊HealthCare</h2>
+         </a>
+         <ul class="nav-menu">
+            <button id="menu-close-button" class="fas fa-times"></button>
+            <li class="nav-item">
+               <a href="index.html" class="nav-link highlight">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+               <a href="about.html" class="nav-link">Về Chúng Tôi</a>
+            </li>
+
+            <li class="nav-item">
+                 <a href="tuvan.html" class="nav-link highlight">Tư Vấn</a>
+            </li>
+
+             <li class="nav-item">
+                <a href="reviews.html" class="nav-link">Khách Hàng</a>
+            </li>
+
+            <li class="nav-item">
+                 <a href="library.html" class="nav-link highlight">Cẩm Nang</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Liên Hệ</a>
+            </li>
+         <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                   <h2 class="title">Nền tảng sàng lọc & đặt lịch khám thông minh</h2>
+                   <p class="description">Chào mừng bạn đến với HealthCare.Nơi chúng tôi giúp bạn hiểu rõ tình trạng sức khỏe và biết khi nào cần đi khám một cách nhanh chóng và chính xác</p>
+                   
+                   <div class="buttons">
+                    <a href="booking.html" class="button order-now">Đặt Lịch</a>
+                    <a href="contact.html" class="button contact-us">Liên Hệ</a>
+                   </div>
+               
+                </div> 
+                <div class="hero-image-wrapper">
+                    <img src="images/healthcre-section.png.png" alt="Hero"
+                    class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!--AI SECTION-->
+        <section class="ai-section">
+            <div class="section-content">
+                <h2 class="section-title"> Sản phẩm hỗ trợ bởi AI</h2>
+            </div>
+           <div class="ai-grid">
+              <a href="ai-check.html" class="ai-card-link">
+            <div class="ai-card">
+              <i class="fa-solid fa-robot"></i>
+              <h3>AI Sàng Lọc Triệu Chứng</h3>
+               <p>Trò chuyện với AI để đánh giá tình trạng sức khỏe theo thời gian thực.</p>
+            </div>
+            </a>
+            <a href="booking.html" class="ai-card-link">
+             <div class="ai-card">
+              <i class="fa-solid fa-calendar-check"></i>
+               <h3>Đặt Lịch Thông Minh</h3>
+               <p>AI đề xuất chuyên khoa và bác sĩ phù hợp.</p>
+               </div>
+            </a>
+
+            <a href="reminder.html" class="ai-card-link">
+                  <div class="ai-card">
+                     <i class="fa-solid fa-calendar-days"></i>
+                      <h3>Nhắc Lịch Tái Khám</h3>
+                     <p>Giúp bạn theo dõi và nhắc lịch tái khám tự động.</p>
+                    </div>
+            </a>
+            </div>
+        </section>
+
+        <!-- Service section-->
+        <section class="services">
+  <h2 class="section-title">Dịch vụ toàn diện</h2>
+
+  <div class="services-grid">
+    <a href="specialty.html" class="service-card">
+      <img src="images/khamchuyenkhoa.png" alt="">
+      <span>Khám chuyên khoa</span>
+    </a>
+    
+  
+      <a href="khamtongquat.html" class="service-card">
+        <img src="images/khamtongquat.png" alt="">
+        <span>Khám tổng quát</span>
+      </a>
+    
+       <a href="xetnghiem.html" class="service-card">
+         <img src="images/xetnghiemyhoc.png" alt="">
+         <span>Xét nghiệm y học</span>
+      </a>
+
+        <a href="suckhoetinhthan.html" class="service-card">
+         <img src="images/tinhthan.png" alt="">
+         <span>Sức khỏe tinh thần</span>
+        </a>
+
+        <a href="test-tinhthan.html" class="mental-card">
+          <img src="images/baitest.png" alt="">
+          <h3>Làm bài test AI</h3>
+        </a>
+
+  </div>
+</section>
+
+        <section class="facility-section">
+
+  <div class="facility-top">
+    <h2>Cơ sở y tế</h2>
+    <a href="#" class="view-more">Xem thêm</a>
+  </div>
+
+  <div class="facility-wrapper">
+
+    <button class="facility-btn left" onclick="slideFacility(-1)">❮</button>
+
+    <div class="facility-slider" id="facilitySlider">
+
+      <!-- 6 THẺ -->
+
+      <div class="facility-card">
+        <img src="images/ungbuouhv.jpg">
+        <h4>Bệnh viện Ung bướu Hưng Việt</h4>
+      </div>
+
+      <div class="facility-card">
+        <img src="images/medlactec.jpg">
+        <h4>Hệ thống y tế MEDLATEC</h4>
+      </div>
+
+      <div class="facility-card">
+        <img src="images/diag.jpg">
+        <h4>Trung tâm xét nghiệm Diag</h4>
+      </div>
+
+      <div class="facility-card">
+        <img src="images/bachmai.jpg">
+        <h4>Bệnh viện Bạch Mai</h4>
+      </div>
+
+      <div class="facility-card">
+        <img src="images/vietduc.png">
+        <h4>Bệnh viện Việt Đức</h4>
+      </div>
+
+      <div class="facility-card">
+        <img src="images/quandoi108.jpg">
+        <h4>Bệnh viện Trung ương Quân đội 108</h4>
+      </div>
+
+    </div>
+
+    <button class="facility-btn right" onclick="slideFacility(1)">❯</button>
+
+  </div>
+
+</section>
+
+        <!--Doctor section-->
+        <section class="doctor-section">
+  <div class="section-content">
+    <h2 class="section-title">Bác sĩ nổi bật</h2>
+
+    <div class="doctor-wrapper">
+
+      <button class="doctor-btn left" onclick="slideDoctor(-1)">❮</button>
+
+      <div class="doctor-slider" id="doctorSlider">
+
+        <!-- 8 DOCTORS -->
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/Anh.jpg">
+          </div>
+          <span class="doctor-role">GIÁO SƯ</span>
+          <h3>GS. Nguyễn Văn Anh</h3>
+          <p>Tim mạch</p>
+        </div>
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/hoangminh.jpg">
+          </div>
+          <span class="doctor-role">TIẾN SĨ</span>
+          <h3>TS. Nguyễn Hoàng Minh</h3>
+          <p>Nội tiết</p>
+        </div>
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/cuong.jpg">
+          </div>
+          <span class="doctor-role">BÁC SĨ</span>
+          <h3>BS. Lê Minh Cường</h3>
+          <p>Nhi khoa</p>
+        </div>
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/maidung.jpg">
+          </div>
+          <span class="doctor-role">BÁC SĨ</span>
+          <h3>BS. Hoàng Mai Dung</h3>
+          <p>Da liễu</p>
+        </div>
+
+        <!-- 4 NGƯỜI KHÁC -->
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/vanhung.jpg">
+          </div>
+          <span class="doctor-role">GIÁO SƯ</span>
+          <h3>GS. Phạm Văn Hùng</h3>
+          <p>Thần kinh</p>
+        </div>
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/hanh.jpg">
+          </div>
+          <span class="doctor-role">TIẾN SĨ</span>
+          <h3>TS. Nguyễn Hồng Hạnh</h3>
+          <p>Hô hấp</p>
+        </div>
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/linh.jpg">
+          </div>
+          <span class="doctor-role">BÁC SĨ</span>
+          <h3>BS. Trần Gia Linh</h3>
+          <p>Tiêu hóa</p>
+        </div>
+
+        <div class="doctor-card">
+          <div class="doctor-img">
+            <img src="images/ha.jpg">
+          </div>
+          <span class="doctor-role">BÁC SĨ</span>
+          <h3>BS. Lê Thu Hà</h3>
+          <p>Sản khoa</p>
+        </div>
+      </div>
+      <button class="doctor-btn right" onclick="slideDoctor(1)">❯</button>
+    </div>
+  </div>
+</section>
+
+      <!-- Footer Section-->
+      <footer class="footer-section">
+        <div class="section-content">
+            <p class="copyright-text">© 2026 HealthCare Website</p>
+
+            <div class="social-link-list">
+        
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <p class="policy-text">
+                <a href="#" class="policy-link">Privacy policy</a>
+                <span class="separator">●</span>
+                <a href="#" class="policy-link">Refund policy</a>
+            </p>
+        </div>
+      </footer>
+     </main> 
+<script src="script.js"></script>
+</body>
+</html>

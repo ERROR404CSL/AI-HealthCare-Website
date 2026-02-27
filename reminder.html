@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Nhắc Tái Khám</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+      <li class="nav-item"><a href="ai-check.html" class="nav-link">Tư Vấn</a></li>
+      <li class="nav-item"><a href="reviews.html" class="nav-link">Khách Hàng</a></li>
+      <li class="nav-item"><a href="library.html" class="nav-link">Cẩm Nang</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="reminder-container">
+
+  <h2>📅 Nhắc Lịch Tái Khám</h2>
+
+  <div class="reminder-box">
+    <label>Chọn ngày tái khám:</label>
+    <input type="date" id="reminderDate">
+    <button onclick="addReminder()">Thêm lịch</button>
+  </div>
+
+  <div id="resultBox" class="result-box"></div>
+  <ul id="reminderList"></ul>
+
+</main>
+
+<script src="reminder.js"></script>
+
+</body>
+</html>

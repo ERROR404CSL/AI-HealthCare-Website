@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục Cẩm Nang</title>
+
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <body class="library-page">
+</body>
+<header>
+   <nav class="navbar section-content">
+      <a href="index.html" class="naglog">
+         <h2 class="logotext">💊HealthCare</h2>
+      </a>
+
+      <ul class="nav-menu">
+         <button id="menu-close-button" class="fas fa-times"></button>
+
+         <li class="nav-item">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+         </li>
+
+         <li class="nav-item">
+            <a href="about.html" class="nav-link">Về Chúng Tôi</a>
+         </li>
+
+         <li class="nav-item">
+            <a href="tuvan.html" class="nav-link">Tư Vấn</a>
+         </li>
+
+         <li class="nav-item">
+            <a href="reviews.html" class="nav-link">Khách Hàng</a>
+         </li>
+
+         <li class="nav-item">
+            <a href="library.html" class="nav-link active">Cẩm Nang</a>
+         </li>
+
+         <li class="nav-item">
+            <a href="contact.html" class="nav-link">Liên Hệ</a>
+         </li>
+      </ul>
+
+      <button id="menu-open-button" class="fas fa-bars"></button>
+   </nav>
+</header>
+<div class="container">
+    <!-- Header -->
+    <div class="top-bar">
+        <h1>Danh mục cẩm nang</h1>
+
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm danh mục">
+            <span>🔍</span>
+        </div>
+    </div>
+
+    <!-- Alphabet -->
+    <h2 class="title-az">Tìm kiếm theo chữ cái</h2>
+    <div class="alphabet" id="alphabet"></div>
+    <div id="noResult" class="no-result" style="display:none;">
+    Không tìm thấy danh mục
+    </div>
+
+    <!-- List -->
+    <div id="diseaseContainer"></div>
+
+</div>
+
+<script src="library.js"></script>
+</body>
+</html>

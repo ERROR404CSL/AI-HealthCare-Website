@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hỏi bác sĩ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="doctor.css">
+</head>
+
+<header>
+  <nav class="navbar section-content">
+    <a href="index.html" class="nav-logo">
+      <h2 class="logo-text">💊HealthCare</h2>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+      <li><a href="about.html" class="nav-link">Về Chúng Tôi</a></li>
+      <li><a href="tuvan.html" class="nav-link active">Tư Vấn</a></li>
+      <li><a href="reviews.html" class="nav-link active">Khách Hàng</a></li>
+      <li><a href="library.html" class="nav-link active">Cẩm Nang</a></li>
+      <li><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="doctor-section">
+
+  <!-- FORM -->
+  <div class="doctor-header">
+  <h2>Hỏi bác sĩ miễn phí</h2>
+
+  <button class="my-question-btn" onclick="toggleMyQuestions()">
+    🕒 Câu hỏi đã đặt
+  </button>
+</div>
+
+<div id="myQuestionPanel" class="my-question-panel">
+  <div class="panel-header">
+    <h3>Câu hỏi của bạn</h3>
+    <span class="close-btn" onclick="toggleMyQuestions()">✖</span>
+  </div>
+
+  <div id="questionList"></div>
+</div>
+
+<!-- Overlay phải đặt ngoài -->
+<div id="overlay" class="overlay" onclick="toggleMyQuestions()"></div>
+
+  <div id="questionList"></div>
+</div>
+
+  <select id="category">
+    <option value="Tổng quát">Tổng quát</option>
+    <option value="Ung thư">Ung thư</option>
+    <option value="Gan">Gan</option>
+    <option value="Cơ xương khớp">Cơ xương khớp</option>
+    <option value="Tiêu hóa">Tiêu hóa</option>
+    <option value="Da liễu">Da liễu</option>
+    <option value="Hô hấp">Hô hấp</option>
+    <option value="Tim mạch">Tim mạch</option>
+  </select>
+
+  <textarea id="questionInput" placeholder="Nhập câu hỏi của bạn..."></textarea>
+
+  <button onclick="submitQuestion()">Gửi câu hỏi</button>
+
+  <!-- CÂU HỎI ĐÃ ĐƯỢC TRẢ LỜI -->
+  <h3 class="featured-title">Câu hỏi đã được trả lời</h3>
+
+  <div class="article-card">
+    <img src="images/buonnon.webp">
+    <div class="article-content">
+      <h4>Triệu chứng 1 tuần nay ăn vào khó tiêu, buồn nôn là bị gì?</h4>
+      <p class="doctor-name">
+        Được trả lời bởi Thạc sĩ, Bác sĩ Nguyễn Thị Hải Yến
+      </p>
+      <p>
+        Triệu chứng khó tiêu kéo dài có thể liên quan đến viêm dạ dày
+        hoặc rối loạn tiêu hóa. Bạn nên hạn chế đồ dầu mỡ và theo dõi thêm.
+      </p>
+    </div>
+  </div>
+
+  <div class="article-card">
+    <img src="images/noiman.jpg">
+    <div class="article-content">
+      <h4>Bé bị nổi mẩn đỏ ở tay chân do nóng hay dị ứng?</h4>
+      <p class="doctor-name">
+        Được trả lời bởi Thạc sĩ, Bác sĩ Nguyễn Thị Hải Yến
+      </p>
+      <p>
+        Tình trạng nổi mẩn có thể do dị ứng thời tiết hoặc thức ăn.
+        Nếu kéo dài hơn 3 ngày nên đi khám.
+      </p>
+    </div>
+  </div>
+</section>
+<script src="doctor.js"></script>
+</body>
